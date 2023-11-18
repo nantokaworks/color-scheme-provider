@@ -1,4 +1,2 @@
-export * from './ColorSchemeProvider'
-export * from './context'
-export * from './matchMediaQuery'
-export * from './useColorScheme'
+export { ColorSchemeProvider } from './ColorSchemeProvider'
+export { useColorScheme } from './useColorScheme'

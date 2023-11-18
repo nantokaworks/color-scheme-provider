@@ -1,12 +1,6 @@
 import React, { ReactNode, useEffect, useMemo, useState } from 'react'
-import {
-  ColorSchemeContext,
-  ContextValue,
-  SYSTEM_COLOR_SCHEME,
-  SystemColorScheme,
-  darkModePreference,
-  isNotSSR,
-} from '.'
+import { ColorSchemeContext, ContextValue, SYSTEM_COLOR_SCHEME, SystemColorScheme } from './context'
+import { darkModePreference, isNotSSR } from './matchMediaQuery'
 
 type ProviderProps = {
   initialColorScheme?: string

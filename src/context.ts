@@ -17,7 +17,7 @@ export type ContextValue = {
 const defaultValue: ContextValue = {
   colorScheme: undefined, // undefined = system
   systemColorScheme: SYSTEM_COLOR_SCHEME.LIGHT,
-  setColorScheme: (colorScheme?: string) => undefined,
+  setColorScheme: (_colorScheme?: string) => undefined,
 }
 
 export const ColorSchemeContext = createContext<ContextValue>(defaultValue)
