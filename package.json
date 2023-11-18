@@ -1,0 +1,50 @@
+{
+  "name": "@ichiql/react-color-scheme",
+  "version": "0.1.0",
+  "description": "Handling system color schemes in React",
+  "keywords": [
+    "zod",
+    "react",
+    "colorscheme",
+    "theme"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ichiql/react-color-scheme.git"
+  },
+  "license": "MIT",
+  "author": "Yamashita, Shinichi",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "vite build && tsc -p tsconfig.build.json",
+    "format": "pnpm dlx prettier --write './**/*.{ts,tsx}' && pnpm dlx sort-package-json && pnpm dlx sort-compiler-options",
+    "lint": "eslint ./src/*",
+    "prepublish": "pnpm build"
+  },
+  "prettier": "@ichiql/prettier-config",
+  "devDependencies": {
+    "@ichiql/prettier-config": "^0.1.1",
+    "@types/react": "^18.2.37",
+    "@vitejs/plugin-react": "^4.2.0",
+    "eslint": "^8.53.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.29.0",
+    "react": "^18.2.0",
+    "rollup-plugin-visualizer": "^5.9.2",
+    "typescript": "^5.0.4",
+    "vite": "^4.3.9"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
