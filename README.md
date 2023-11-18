@@ -16,11 +16,8 @@ import { ColorSchemeProvider, useColorScheme } from '@ichiql/react-color-scheme'
 return (
   <ColorSchemeProvider
     initialColorScheme={undefined}
-    onChangeColorScheme={(colorScheme) => {
-      console.log(`!! colorScheme -> ${colorScheme}`)
-    }}
-    onChangeSystemColorScheme={(colorScheme) => {
-      console.log(`!! system colorScheme -> ${colorScheme}`)
+    onChangeColorScheme={(colorScheme, isSystemColorScheme) => {
+      console.log(`!!! colorScheme -> ${colorScheme} / isSystem -> ${isSystemColorScheme}`)
     }}
   >
     ~~~

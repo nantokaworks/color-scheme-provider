@@ -16,7 +16,8 @@
     "jsx": "react-jsx",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "target": "ESNext",
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "rootDir": "."
   },
   "include": ["vite.config.ts", "src/**/*.ts", "src/**/*.tsx"]
 }

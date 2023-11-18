@@ -1,6 +1,6 @@
 {
   "name": "@ichiql/react-color-scheme",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "Handling system color schemes in React",
   "keywords": [
     "zod",
@@ -15,15 +15,7 @@
   "license": "MIT",
   "author": "Yamashita, Shinichi",
   "type": "module",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs"
-    },
-    "./package.json": "./package.json"
-  },
-  "main": "./dist/index.mjs",
-  "module": "./dist/index.mjs",
+  "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
     "build": "vite build && tsc -p tsconfig.build.json",
@@ -42,7 +34,12 @@
     "react": "^18.2.0",
     "rollup-plugin-visualizer": "^5.9.2",
     "typescript": "^5.0.4",
-    "vite": "^4.3.9"
+    "vite": "^4.3.9",
+    "vite-plugin-no-bundle": "^3.0.0"
+  },
+  "peerDependencies": {
+    "react": ">= 18",
+    "react-dom": ">= 18"
   },
   "publishConfig": {
     "access": "public"

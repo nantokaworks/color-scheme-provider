@@ -2,9 +2,12 @@ import react from '@vitejs/plugin-react'
 import { visualizer } from 'rollup-plugin-visualizer'
 import { defineConfig } from 'vite'
 
+// import noBundlePlugin from 'vite-plugin-no-bundle'
+
 export default defineConfig({
   plugins: [
     react(),
+    // noBundlePlugin({ copy: '**/*.css' }),
     visualizer({
       emitFile: true,
       filename: 'stats.html',
@@ -21,11 +24,12 @@ export default defineConfig({
       fileName: (format, entryName) => `${entryName}.${format === 'es' ? 'mjs' : 'cjs'}`,
     },
     rollupOptions: {
-      external: ['react', 'react/jsx-runtime'],
+      external: ['react', 'react-dom', 'react/jsx-runtime'],
       output: {
         exports: 'named',
         globals: {
           react: 'react',
+          'react-dom': 'react-dom',
           'react/jsx-runtime': 'react/jsx-runtime',
         },
       },
