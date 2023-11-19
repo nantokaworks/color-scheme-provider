@@ -1,13 +1,12 @@
 import react from '@vitejs/plugin-react'
 import { visualizer } from 'rollup-plugin-visualizer'
 import { defineConfig } from 'vite'
-
-// import noBundlePlugin from 'vite-plugin-no-bundle'
+import noBundlePlugin from 'vite-plugin-no-bundle'
 
 export default defineConfig({
   plugins: [
     react(),
-    // noBundlePlugin({ copy: '**/*.css' }),
+    noBundlePlugin({ copy: '**/*.css' }),
     visualizer({
       emitFile: true,
       filename: 'stats.html',
