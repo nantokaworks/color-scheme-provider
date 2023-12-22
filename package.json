@@ -1,6 +1,6 @@
 {
   "name": "@ichiql/react-color-scheme",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Handling system color schemes in React",
   "keywords": [
     "zod",
