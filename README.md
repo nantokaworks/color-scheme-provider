@@ -1,9 +1,9 @@
-# @ichiql/react-color-scheme
+# color-scheme-provider
 
 ```shell
-pnpm add @ichiql/react-color-scheme
-npm install @ichiql/react-color-scheme
-yarn add @ichiql/react-color-scheme
+pnpm add color-scheme-provider
+npm install color-scheme-provider
+yarn add color-scheme-provider
 ```
 
 React で OS のカラースキーム(テーマ)変更に対応する
@@ -11,7 +11,7 @@ React で OS のカラースキーム(テーマ)変更に対応する
 React to support OS color scheme (theme) changes.
 
 ```js
-import { ColorSchemeProvider, useColorScheme } from '@ichiql/react-color-scheme'
+import { ColorSchemeProvider, useColorScheme } from 'color-scheme-provider'
 
 return (
   <ColorSchemeProvider

@@ -10,9 +10,6 @@ dependencies:
     version: 18.2.0(react@18.2.0)
 
 devDependencies:
-  '@ichiql/prettier-config':
-    specifier: ^0.1.1
-    version: 0.1.1(prettier@2.8.8)
   '@types/react':
     specifier: ^18.2.37
     version: 18.2.37
@@ -28,6 +25,9 @@ devDependencies:
   eslint-plugin-import:
     specifier: ^2.29.0
     version: 2.29.0(eslint@8.54.0)
+  prettier-config-nantokaworks:
+    specifier: ^0.1.1
+    version: 0.1.1(prettier@2.8.8)
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -528,14 +528,6 @@ packages:
 
   /@humanwhocodes/object-schema@2.0.1:
     resolution: {integrity: sha512-dvuCeX5fC9dXgJn9t+X5atfmgQAzUOWqS1254Gh0m6i8wKd10ebXkfNKiRK+1GWi/yTvvLDHpoxLr0xxxeslWw==}
-    dev: true
-
-  /@ichiql/prettier-config@0.1.1(prettier@2.8.8):
-    resolution: {integrity: sha512-6nBzBqPt6uawuAuhyvDT3M6A+o2hZFB30/ryFGWAGa/rPqyttXNPod9nxB63QzVMlqjrFKD4u59yUAecsxZAnQ==}
-    peerDependencies:
-      prettier: ^2.2.0
-    dependencies:
-      prettier: 2.8.8
     dev: true
 
   /@jridgewell/gen-mapping@0.3.3:
@@ -1906,6 +1898,14 @@ packages:
   /prelude-ls@1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
+    dev: true
+
+  /prettier-config-nantokaworks@0.1.1(prettier@2.8.8):
+    resolution: {integrity: sha512-Tm4owOkvb3R/1fF8FiTjPwOnS5/vtEk3LNu4hTTDZ6e38wXIjYGmc5lQcZ47pyQQ8oBFgOsmTwJfMD0U62Dluw==}
+    peerDependencies:
+      prettier: ^2.2.0
+    dependencies:
+      prettier: 2.8.8
     dev: true
 
   /prettier@2.8.8:
