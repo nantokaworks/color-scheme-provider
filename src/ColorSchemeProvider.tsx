@@ -1,4 +1,4 @@
-import { ReactNode, useEffect, useMemo, useState } from 'react'
+import { ReactNode, useEffect, useMemo, useRef, useState } from 'react'
 import { ColorSchemeContext, ContextValue, SYSTEM_COLOR_SCHEME, SystemColorScheme } from './context'
 import { darkModePreference, isNotSSR } from './matchMediaQuery'
 
@@ -18,6 +18,7 @@ export function ColorSchemeProvider({
   onChangeColorScheme,
   children,
 }: ProviderProps) {
+  const prevOnChangeTrigger = useRef<{ colorScheme: string; isSystem: boolean }>()
   const [currentColorScheme, setCurrentColorScheme] = useState<string | undefined>(
     initialColorScheme
   )
@@ -30,6 +31,13 @@ export function ColorSchemeProvider({
     if (!onChangeColorScheme) return
     const isSystem = currentColorScheme === undefined
     const colorScheme = currentColorScheme || systemColorScheme || SYSTEM_COLOR_SCHEME.LIGHT
+    if (
+      prevOnChangeTrigger.current?.colorScheme === colorScheme &&
+      prevOnChangeTrigger.current?.isSystem === isSystem
+    )
+      return
+
+    prevOnChangeTrigger.current = { colorScheme, isSystem }
 
     onChangeColorScheme({ colorScheme, isSystem })
   }, [onChangeColorScheme, currentColorScheme, systemColorScheme])
