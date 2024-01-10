@@ -5,7 +5,7 @@ import { darkModePreference, isNotSSR } from './matchMediaQuery'
 type onChangeColorSchemeFunction = (args: {
   colorScheme: string | undefined
   isSystem: boolean
-}) => undefined
+}) => void
 
 type ProviderProps = {
   initialColorScheme?: string
